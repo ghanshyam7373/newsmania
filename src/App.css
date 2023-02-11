@@ -1,38 +1,110 @@
-.App {
+body{
+  padding: 0;
+  margin: 0;
+  background-color: black;
+  font-family: 'Nunito', sans-serif;
+}
+#navLogo{
+  width: 120px;
+  height: 40px;
+}
+.d-flex{
+  position: absolute;
+  right: 10px;
+}
+#mainheadlineimg{
+  object-fit: cover;
+  height: 5%;
+  width: auto;
+}
+#topheadtext{
   text-align: center;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.card p{
+  font-size: 13px;
+}
+.card{
+  height: 45vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.imgCardDiv img{
+  max-height: 25vh;
+  object-fit: cover;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.cenloader{
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  padding : 30px;
+  position: relative;
+  top: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.spinner {
+   position: relative;
+   width: 22.4px;
+   height: 22.4px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.spinner::before,
+.spinner::after {
+   content: '';
+   width: 100%;
+   height: 100%;
+   display: block;
+   animation: spinner-b4c8mmmd 0.5s backwards, spinner-49opz7md 1.25s 0.5s infinite ease;
+   border: 5.6px solid #9ac20a;
+   border-radius: 50%;
+   box-shadow: 0 -33.6px 0 -5.6px #9ac20a;
+   position: absolute;
+}
+
+.spinner::after {
+   animation-delay: 0s, 1.25s;
+}
+
+@keyframes spinner-b4c8mmmd {
+   from {
+      box-shadow: 0 0 0 -5.6px #9ac20a;
+   }
+}
+
+@keyframes spinner-49opz7md {
+   to {
+      transform: rotate(360deg);
+   }
+}
+
+@media only screen and (max-width: 991px){
+  .d-flex{
+    position: absolute;
+    left: 10px;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media only screen and (min-width: 992px){
+  .card{
+    height: 50vh !important;
+  }
+}
+
+@media only screen and (min-width: 768px){
+  .cardbody{
+    height: 45vh !important;
+  }
+  .card{
+    height: 57vh !important;
+  }
+  .imgCardDiv img{
+    max-height: 20vh;
+    object-fit: cover;
+  }
+}
+
+@media only screen and (max-width: 445px){
+  .card{
+    height: 50vh !important;
   }
 }
