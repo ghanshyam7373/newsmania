@@ -12,6 +12,12 @@ body{
   position: absolute;
   right: 10px;
 }
+.pagebtnGrup{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+}
 #mainheadlineimg{
   object-fit: cover;
   height: 5%;

@@ -1,9 +1,7 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom';
-// import Search from './Search.js';
 
-export class Navbar extends Component {
-    render() {
+const Navbar = () => {
         return (
             <div>
                 <nav className="navbar navbar-expand-lg navbar-dark">
@@ -24,7 +22,7 @@ export class Navbar extends Component {
                             </ul>
                             <form className="d-flex" role="search">
                                 <input className="form-control me-2" id="searchInput" type="search" placeholder="Search" aria-label="Search" />
-                                <button className="btn btn-outline-success" type="submit">Search</button>
+                                <Link className="btn btn-outline-success"id="searchBtn" to="/search" type="button">Search</Link>
                             </form>
                         </div>
                     </div>
@@ -32,6 +30,5 @@ export class Navbar extends Component {
             </div>
         )
     }
-}
 
 export default Navbar

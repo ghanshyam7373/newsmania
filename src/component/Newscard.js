@@ -1,8 +1,7 @@
-import React, { Component } from "react";
+import React from "react";
 
-export default class Newscard extends Component {
-  render() {
-    let { title, desc, imgUrl, newsUrl, author, date, source } = this.props;
+const Newscard = (props) => {
+    let { title, desc, imgUrl, newsUrl, author, date, source } = props;
     return (
       <>
         <div className="card bg-dark my-4">
@@ -14,9 +13,6 @@ export default class Newscard extends Component {
           </div>
           <div className="card-body">
             <h6 className="card-title">{title}..</h6>
-            {/* <p>
-              <span className="badge bg-danger">{source}</span>
-            </p> */}
             <p className="card-text text">{desc}..</p>
             <p className="card-text">
               <small className="text-muted">
@@ -36,5 +32,6 @@ export default class Newscard extends Component {
         </div>
       </>
     );
-  }
 }
+
+export default Newscard;
